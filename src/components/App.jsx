@@ -42,8 +42,8 @@ export const App = () => {
     }
 
     const getImages = async () => {
-      setIsLoading(true);
       try {
+        setIsLoading(true);
         const response = await fetchImages(query, page);
 
         setImages(prevImages => [...prevImages, ...response.hits]);
